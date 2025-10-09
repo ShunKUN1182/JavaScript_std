@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/**
+  デフォルトスタイル
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;   /* 基準となるフォントサイズを10pxへ */
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+body {
+  background: #fefefe;
+  color: #333333;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+}
+
+.read-wrap {
+  /* 縦横中央揃え */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  h1,
+  h2,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 2;
+    margin-bottom: 0.8rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/**
+  マウスストーカーの設定
+ */
+body {
+  /* cursor: none;     デフォルトのマウスカーソルを非表示 */
+}
+
+#cursor {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  transition: 0.1s;   /* マウスストーカー画像の追従アニメーション */
+}

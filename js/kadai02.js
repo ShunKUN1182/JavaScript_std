@@ -33,3 +33,5 @@ fontSizeBtn.addEventListener("click" , ()=>{
 lineTextBtn.addEventListener("click" , ()=>{
     box4.style.border = lineText.value;
 });
+
+

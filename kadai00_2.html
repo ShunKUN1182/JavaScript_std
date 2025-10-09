@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/kadai00_2.css">
+
+    <title>JavaScript演習１ - kadai00_2</title>
+
+    <script defer src="js/kadai00_2.js"></script>
+    
+</head>
+<body>
+<div class="container">
+
+    <div class="content-wrap">
+        <div class="content">
+            <h1>JS Method</h1>
+            <div id="controller">
+                <div class="flex flex-col">
+                    <h2>PICKER</h2>
+                    <div class="flex items-center gap-6">
+                        <input type="color" id="set_color1" value="#FF6347">
+                        <p id="txt_color1">カラーコードの表示</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <input type="color" id="set_color2" value="#87CEEB">
+                        <p id="txt_color2">カラーコードの表示</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2>ANGLE</h2>
+                    <div class="flex items-center gap-6">
+                        <input type="range" id="set_degree" value="90" min="0" max="360">
+                        <p id="txt_degree">角度の表示</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2>RESULT CODE</h2>
+                    <p id="txt_result">グラデーションのコードを表示</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
