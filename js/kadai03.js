@@ -8,12 +8,14 @@ const globalY = document.querySelector("#global-y");
 console.log(clientX.value);
 
 
-document.addEventListener("mousemove" , function(event){
+document.addEventListener("mousemove" , (event)=>{
     clientX.value = event.clientX;
     clientY.value = event.clientY;
     screenX.value = event.screenX;
     screenY.value = event.screenY;
-    globalX.value = document.documentElement.scrollTop + event.clientY;
-    globalY.value = document.documentElement.scrollLeft + event.clientX;
+    globalX.value = document.documentElement.scrollLeft + event.clientX;
+    globalY.value = document.documentElement.scrollTop + event.clientY;
+    // console.dir(event)
+    // console.dir(document.documentElement.scrollTop);
 });
 
