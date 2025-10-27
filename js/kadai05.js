@@ -3,8 +3,9 @@ console.log(blanks);
 
 
 blanks.forEach(e =>{
-    e.addEventListener("click" , ()=>{
-        e.target = "_blank";
+    e.addEventListener("click" , function(event){
+        event.preventDefault();
+        window.open(e.href);
     })
 })
 
