@@ -15,6 +15,10 @@ nextBtn.addEventListener("click", () => {
         counter = 1;
     }
     console.log(counter);
+    lists.forEach((e) => {
+        e.style.display = "none";
+    });
+    lists[counter - 1].style.display = "block";
 });
 
 prevBtn.addEventListener("click", () => {
@@ -24,4 +28,8 @@ prevBtn.addEventListener("click", () => {
         counter = lists.length;
     }
     console.log(counter);
+    lists.forEach((e) => {
+        e.style.display = "none";
+    });
+    lists[counter - 1].style.display = "block";
 });
