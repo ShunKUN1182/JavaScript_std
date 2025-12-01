@@ -2,6 +2,7 @@ const nextBtn = document.querySelector("#next");
 const prevBtn = document.querySelector("#prev");
 const lists = document.querySelectorAll("#slider > li");
 let counter = 1;
+let timer = 2000;
 console.log(lists);
 
 // for (let i = 0; i < array.length; i++) {
