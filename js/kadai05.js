@@ -8,4 +8,4 @@ blanks.forEach((e) => {
     });
 });
 
-open(url, "window名");
+// open(url, "window名");
