@@ -21,7 +21,7 @@
         <script defer src="js/common.js"></script>
         <!-- kadai07.js -->
         <!-- <script defer type="module" src="js/kadai.js"></script> -->
-        <script src="js/kadai07.js" defer></script>
+        <!-- <script src="js/kadai07.js" defer></script> -->
     </head>
 
     <body>
@@ -44,6 +44,7 @@
                             <li class="show"><img src="images/img-kadai06-008.jpg" alt="" /></li>
                             <li class="show"><img src="images/img-kadai06-009.jpg" alt="" /></li>
                             <li class="show"><img src="images/img-kadai06-010.jpg" alt="" /></li>
+                            images/img-kadai06-001.jpg
                             <li class="show"><img src="images/img-kadai06-011.jpg" alt="" /></li>
                             <li class="show"><img src="images/img-kadai06-012.jpg" alt="" /></li>
                             <li class="show"><img src="images/img-kadai06-013.jpg" alt="" /></li>
@@ -71,5 +72,26 @@
             </footer>
         </div>
         <!--/#wrapper-->
+        <script>
+            const nextBtn = document.querySelector("#next");
+            const prevBtn = document.querySelector("#prev");
+            const lists = document.querySelectorAll("#slider > li");
+            let currentIndex = 0;
+
+            nextBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % lists.length;
+                showSlider(currentIndex);
+            });
+            prevBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + lists.length) % lists.length;
+                showSlider(currentIndex);
+            });
+
+            function showSlider(index) {
+                lists.forEach((e, i) => {
+                    e.style.display = index === i ? "block" : "none";
+                });
+            }
+        </script>
     </body>
 </html>
