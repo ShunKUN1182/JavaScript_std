@@ -43,7 +43,7 @@ const q04 = () => {
 
     const numA = parseInt(prompt(`Q04. １つ目の数値を入力`));
     const numB = parseInt(prompt(`Q04. ２つ目の数値を入力`));
-    console.log(numA + numB);
+    console.log(`${numA} + ${numB} = ${numA + numB}`);
 };
 
 // <-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*->
@@ -56,7 +56,7 @@ const q05 = () => {
 
     const numC = parseInt(prompt(`Q05. １つ目の数値を入力`));
     const numD = parseInt(prompt(`Q05. ２つ目の数値を入力`));
-    console.log(numC % numD);
+    console.log(`${numC} ÷ ${numD} の余りは${numC % numD}`);
 };
 
 // <-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*->
@@ -69,7 +69,14 @@ const q06 = () => {
 
     const numE = parseInt(prompt(`Q06. １つ目の数値を入力`));
     const numF = parseInt(prompt(`Q06. ２つ目の数値を入力`));
-    console.log(numE + numF, numE - numF, numE * numF, numE / numF);
+    console.log(
+        `一つ目の数値は:${numE}`,
+        `二つ目の数値は:${numF}`,
+        `和：${numE + numF}`,
+        `差：${numE - numF}`,
+        `積：${numE * numF}`,
+        `除：${numE / numF}`
+    );
 };
 
 // <-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*->
@@ -84,7 +91,7 @@ const q07 = () => {
     const taxNum = parseFloat(prompt(`Q07. 消費税率を入力（%）`));
     const tax = taxNum / 100;
     const addPrice = price * tax;
-    console.log(price + addPrice);
+    console.log(`金額：${price}`, `税額：${taxNum}`, `結果：${addPrice + price}`);
 };
 
 // <-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*->
@@ -96,7 +103,7 @@ const q08 = () => {
     console.log(`08. 半径を入力して、円の面積をコンソールに表示する`);
 
     const circle = parseInt(prompt(`Q08. 円の半径を入力`));
-    console.log(circle * circle * Math.PI);
+    console.log(`円の半径：${circle}`, `円の面積：${circle * circle * Math.PI}`);
 };
 
 // <-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*->
@@ -112,5 +119,11 @@ const q09 = () => {
     const numG = parseInt(prompt(`Q09. １つ目の数値を入力`));
     const numH = parseInt(prompt(`Q09. ２つ目の数値を入力`));
     const numResult = numG / numH;
-    console.log(parseFloat(numResult.toFixed(2)));
+    const result = parseFloat(numResult.toFixed(2));
+    console.log(
+        `1つ目の数値：${numG}`,
+        `2つ目の数値：${numH}`,
+        `そのままの結果：${numResult}`,
+        `小数点を丸めた結果：${result}`
+    );
 };
