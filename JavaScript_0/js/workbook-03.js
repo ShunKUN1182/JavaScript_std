@@ -58,9 +58,8 @@ const q18 = () => {
     // ----------------------------------------
     console.log(`18. 九九の表をコンソールに表示する`);
     for (let k = 1; k < 10; k++) {
-        for (let l = 1; l < 10; l++) {
-            console.log(`${k * l}   `);
-        }
+        for (let l = 1; l < 10; l++) {}
+        console.log(`${k * l}\t`);
     }
 };
 

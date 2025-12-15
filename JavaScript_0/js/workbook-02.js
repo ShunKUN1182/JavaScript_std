@@ -99,7 +99,11 @@ const q14 = () => {
     const attendanceRate = parseFloat(prompt(`Q14. 出席率の入力`));
     const evaluationPoints = parseInt(prompt(`Q14. 評価点の入力`));
     if (evaluationPoints <= 100 && evaluationPoints >= 0) {
-        checkAttendanceRate();
+        if (attendanceRate <= 100 && attendanceRate >= 0) {
+            checkAttendanceRate();
+        } else {
+            alert("error");
+        }
     } else {
         alert("error");
     }
@@ -115,13 +119,13 @@ const q14 = () => {
     function checkScore() {
         if (evaluationPoints >= 90 && evaluationPoints <= 100) {
             inputScore("A");
-        } else if (evaluationPoints > 90 && evaluationPoints <= 80) {
+        } else if (evaluationPoints >= 80 && evaluationPoints <= 90) {
             inputScore("B");
-        } else if (evaluationPoints > 80 && evaluationPoints <= 70) {
+        } else if (evaluationPoints >= 70 && evaluationPoints <= 80) {
             inputScore("C");
-        } else if (evaluationPoints > 70 && evaluationPoints <= 60) {
+        } else if (evaluationPoints >= 60 && evaluationPoints <= 70) {
             inputScore("D");
-        } else if (evaluationPoints > 60 && evaluationPoints <= 0) {
+        } else if (evaluationPoints >= 0 && evaluationPoints <= 60) {
             inputScore("F");
         } else {
             alert("error");
