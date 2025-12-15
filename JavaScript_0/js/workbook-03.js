@@ -57,9 +57,13 @@ const q18 = () => {
     // 18. 九九の表
     // ----------------------------------------
     console.log(`18. 九九の表をコンソールに表示する`);
+    let inputNum = "";
     for (let k = 1; k < 10; k++) {
-        for (let l = 1; l < 10; l++) {}
-        console.log(`${k * l}\t`);
+        for (let l = 1; l < 10; l++) {
+            inputNum += `${k * l}   `;
+        }
+        console.log(inputNum);
+        inputNum = "";
     }
 };
 
@@ -70,6 +74,10 @@ const q19 = () => {
     console.log(`19. 10進数の値から2進数の値へ基数変換する`);
 
     const numB = parseInt(prompt(`Q19. 1以上の好きな正の整数を入力`));
+    let numC = numB;
+    while (numC % 2 == 0) {
+        // numC = numC / 2;
+    }
     console.log(`10進数：${numB}`);
-    console.log(`2進数：${numB.toString(2)}`);
+    console.log(`2進数：${numC}`);
 };
