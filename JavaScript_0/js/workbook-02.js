@@ -42,6 +42,8 @@ const q11 = () => {
         console.log(`都道府県番号：${kinkiNum}`, "奈良県");
     } else if (kinkiNum == 30) {
         console.log(`都道府県番号：${kinkiNum}`, "和歌山県");
+    } else {
+        console.log(`都道府県番号：${kinkiNum}`, "該当なし");
     }
 };
 
