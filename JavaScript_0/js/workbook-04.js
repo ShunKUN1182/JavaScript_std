@@ -24,7 +24,13 @@ const q21 = () => {
         `21. 配列に指定した回数の入力した数値を保存して、保存した配列の値をコンソールに表示する`
     );
 
-    prompt(`Q21. 保存するデータ数を入力`);
+    const num = Number(prompt(`Q21. 保存するデータ数を入力`));
+    const nums = [];
+    console.log(nums);
+    for (let i = 0; i < num; i++) {
+        nums.push(i + 1);
+    }
+    console.log(nums);
 };
 
 const q22 = () => {
