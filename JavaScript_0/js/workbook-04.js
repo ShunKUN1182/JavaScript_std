@@ -38,9 +38,21 @@ const q22 = () => {
     // ----------------------------------------
     console.log(`22. 多次元配列にある要素を参照してコンソールに表示する`);
 
-    const collegeSelect = prompt(`Q22. カレッジの選択`);
-    const courseSelect = prompt(`Q22. コースの選択`);
-    console.log(collegeSelect, courseSelect);
+    const collegeSelect = Number(prompt(`Q22. カレッジの選択`));
+    const courseSelect = Number(prompt(`Q22. コースの選択`));
+    const eccs = [
+        {
+            college: "ゲーム・クリエイティブ",
+            course: ["ゲーム開発エキスパート", "ゲームプログラム開発", "CGデザイン"],
+        },
+        {
+            college: "IT",
+            course: ["IT開発エキスパート", "IT開発研究", "Webデザイン", "システムエンジニア"],
+        },
+    ];
+    console.log(
+        `カレッジの選択番号：${collegeSelect} => ${eccs[collegeSelect].college} : ${courseSelect} => ${eccs[collegeSelect].course[courseSelect]}`
+    );
 };
 
 const q23 = () => {
