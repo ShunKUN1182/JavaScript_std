@@ -61,6 +61,22 @@ const q23 = () => {
     // ----------------------------------------
     console.log(`23. 指定した回数入力した数値を配列に保存して、その数値の和をコンソールに表示する`);
 
-    prompt(`Q23. 保存するデータ数を入力`);
-    prompt(`Q23. 数値の入力`);
+    const saveNum = Number(prompt(`Q23. 保存するデータ数を入力`));
+    const numbers = [];
+    let formula = "";
+
+    for (let i = 0; i < saveNum; i++) {
+        const num = Number(prompt(`Q23. 数値の入力`));
+        if (i == saveNum - 1) {
+            formula += `${num}=`;
+        } else {
+            formula += `${num}+`;
+        }
+        numbers.push(num);
+    }
+
+    const totalNum = numbers.reduce((prev, current) => prev + current);
+
+    console.log(`入力回数：${saveNum}回
+    ${formula}${totalNum}`);
 };
