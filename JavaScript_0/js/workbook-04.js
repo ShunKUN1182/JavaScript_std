@@ -26,11 +26,10 @@ const q21 = () => {
 
     const num = Number(prompt(`Q21. 保存するデータ数を入力`));
     const nums = [];
-    console.log(nums);
     for (let i = 0; i < num; i++) {
         nums.push(i + 1);
     }
-    console.log(nums);
+    console.table(nums);
 };
 
 const q22 = () => {
@@ -39,8 +38,9 @@ const q22 = () => {
     // ----------------------------------------
     console.log(`22. 多次元配列にある要素を参照してコンソールに表示する`);
 
-    prompt(`Q22. カレッジの選択`);
-    prompt(`Q22. コースの選択`);
+    const collegeSelect = prompt(`Q22. カレッジの選択`);
+    const courseSelect = prompt(`Q22. コースの選択`);
+    console.log(collegeSelect, courseSelect);
 };
 
 const q23 = () => {
