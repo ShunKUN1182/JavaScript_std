@@ -73,11 +73,23 @@ const q19 = () => {
     // ----------------------------------------
     console.log(`19. 10進数の値から2進数の値へ基数変換する`);
 
-    const numB = parseInt(prompt(`Q19. 1以上の好きな正の整数を入力`));
-    let numC = numB;
-    while (numC % 2 == 0) {
-        // numC = numC / 2;
+    let num = parseInt(prompt(`Q19. 1以上の好きな正の整数を入力`));
+    const nums = [];
+    let newNum = num;
+    let num2 = "";
+
+    while (newNum > 0) {
+        nums.unshift(newNum % 2);
+        newNum = Math.floor(newNum / 2);
+        console.log(newNum);
+        console.log(nums);
     }
-    console.log(`10進数：${numB}`);
-    console.log(`2進数：${numC}`);
+
+    for (let i = 0; i < nums.length; i++) {
+        num2 += Number(nums[i]);
+        console.log(num2);
+    }
+
+    console.log(`10進数：${num}`);
+    console.log(`2進数：${num2}`);
 };
