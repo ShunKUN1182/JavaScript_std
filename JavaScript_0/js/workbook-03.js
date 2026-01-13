@@ -81,13 +81,13 @@ const q19 = () => {
     while (newNum > 0) {
         nums.unshift(newNum % 2);
         newNum = Math.floor(newNum / 2);
-        console.log(newNum);
-        console.log(nums);
+        // console.log(newNum);
+        // console.log(nums);
     }
 
     for (let i = 0; i < nums.length; i++) {
         num2 += Number(nums[i]);
-        console.log(num2);
+        // console.log(num2);
     }
 
     console.log(`10進数：${num}`);
